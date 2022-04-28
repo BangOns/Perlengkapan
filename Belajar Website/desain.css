@@ -1,0 +1,87 @@
+.mentok{
+    padding: 0px;
+    margin: 0px;
+}
+
+.tamplate{
+    position: fixed;
+}
+
+.foto2{
+width: 1453px;
+height: 120px;
+border-radius: 10px;
+}
+
+
+.awal{
+    width: 925px;
+
+    border-radius: 10px;;
+    position: fixed;
+    margin-bottom: 1000px;
+}
+.tulis{
+    position: fixed;
+    font-family: 'Rakkas', cursive;
+    font-size: 65px;
+    margin-left: 600px;
+    margin-top: 15px;
+}
+
+.foto{
+    width: 100px;
+    height: 100px;
+border: 5px solid yellow;   
+border-radius: 100px; 
+background-color: #F5AE59;
+margin-top: 3px;
+margin-left: 6px;
+}
+.teks1{
+    line-height: 16px;
+    
+}
+.judul{
+    font-family: 'Rakkas', cursive;
+    border : 5px solid green;
+    border-radius: 10px;
+    margin-top: 95px;
+    margin-bottom: 10px;
+}
+.H{
+    font-family: 'Merriweather', serif;
+    font-size: 50px;
+    font-weight: 500px;
+}
+.teks2{
+    font-family: 'Merriweather', serif;
+    line-height: 3px;
+}
+
+.habib{
+    width: 300px;
+    float: left;
+    border-radius: 5px;
+   
+}
+.line{
+    background-color: green;
+    height: 5px;
+    border-radius: 10px;
+
+}
+.uus{
+    float: right;
+    border-radius: 5px;
+    width: 210px;
+    margin-top: 0px;
+}
+.tek{
+    font-family: 'Merriweather', serif;
+    line-height: 16px;
+}
+.u{
+    font-size: 50px;
+    font-weight: 500px;
+}
