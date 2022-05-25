@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parameter&argument</title>
+  </head>
+  <body>
+    <!-- Parameter
+         adalah variabel yang tulis didalam kurung pada saat funciton dibuat , digunakan untuk menampung nilai yang dikirmkan saat function dipanggil
+    argument 
+adalah nilai yang dikirimkan ke parameter saat fungsi dipanggil-->
+    <!-- Bagaimana Jika parameter dan argumentnya tidak sesuai ? 
+-Jika Parameter lebih sedikit dari argument, maka argument kelebihannya akan diabaikan
+- dan jika paramternya lebih banyak dari pada argument , maka parameter kelbihannya akan diisi dengan nilai undefined
+
+ARGUMENTS
+array yang bernilai yang dikirmkan saat fungsi dipanggil-->
+    <script>
+      // function tambah(a, b) {
+      //   return a + b;
+      // }
+      // Contoh 1
+      // console.log(tambah(1, 2));
+      // Contoh 2
+      // var a = parseInt(prompt("Masukkan Nilai 1 = "));
+      // var b = parseInt(prompt("Masukkan Nilai 2 ="));
+      // // var hasil = tambah(a, b);
+      // var hasil = tambah(a * 2, b * 2);
+      // Contoh 3
+      // function kali(a, b) {
+      //   return a * b;
+      // }
+      // var hasil = kali(tambah(1, 2), tambah(2, 3));
+      // console.log(hasil);
+      // Contoh 4
+      // function tambah(a, b) {
+      //   return a + b;
+      // }
+      // var coba = tambah(10, 20, 30);
+      // // Jadi angka 30 nya diabaikan
+      // console.log(coba);
+      // contoh 5
+      // function tambah(a, b, c) {
+      //   // Jadi parameter 'c' diabaikan
+      //   return a + b;
+      // }
+      // var coba = tambah(10, 20);
+      // console.log(coba);
+      // Contoh ARGUMENTS
+      // function tambah() {
+      //   return arguments;
+      // }
+      // var coba = tambah(10, 20, 30, "hi", true);
+      // console.log(coba);
+      // Contoh arguments (array)
+      // function tambah() {
+      //   var hasil = 0;
+      //   for (var i = 0; i < arguments.length; i++) {
+      //     hasil += arguments[i];
+      //   }
+      //   return hasil;
+      // }
+      // var coba = tambah(1, 2, 3, 4, 5);
+      // console.log(coba);
+    </script>
+  </body>
+</html>

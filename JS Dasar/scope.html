@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Block Scope
+    dilakukan untuk bahasa C dan Java  -->
+    <!--  function Scope
+    bisa dilakukan untuk  javascript -->
+    <!-- Contoh 1 -->
+    <script>
+      // INI VARIABLE GLOBAL
+      var a = 1;
+      // dan bisa juga memakai 'use strict'
+      // "use strict";
+      function tes(a) {
+        //   INI NAMANYA VARIABLE LOKAL
+        // var b = 2;
+        // Jadi kita bisa mengakses variable global
+        // console.log(a);
+
+        // Jika kita menginput variabel yang sama dengan yang diatas dan jika ingin menampilkan nya diluar function maka variable 'a' yang didalam function tidak akan muncul
+        // var a = 2;
+
+        // dan bisa kita memanggil variabel global kedalam funs=ction dengan cara
+        // console.log(window.a);
+
+        // dan kita bisa memanggil variabel 'a' yang ada di funtion dan menampilkannya diluar function dengan cara :
+        // a = 2;
+        console.log(a);
+      }
+
+      //   Jadi variable 'b' tidak akan muncul atau tidak terdeteksi karena keluar dari memanggilnya keluar dari function
+
+      tes(2);
+      // console.log(a);
+    </script>
+  </body>
+</html>

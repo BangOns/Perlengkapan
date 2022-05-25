@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   var arr = ["a", 1, true];
+      //   console.log(arr);
+      //   var arr = [];
+      //   arr[0] = "syahroni";
+      //   arr[1] = "ganteng";
+      //   arr[2] = "banget";
+      //   console.log(arr);
+
+      // Menghapus array
+      //   var arr = ["syahroni", "ganteng", "banget"];
+      //   arr[1] = undefined;
+      //   console.log(arr);
+
+      //   //   MEnampilkan isi array
+      // length untuk mengetahui isi array
+      //   var arr = ["syahroni", "ganteng", "banget", "putri"];
+      //   for (var i = 0; i < arr.length; i++) {
+      //     console.log("mahasiswa ke-" + (i + 1) + " ; " + arr[i]);
+      //   }
+
+      //   Method pada array
+      // Join
+      //    (Untuk Merubah isi array menjadi string)
+      //   var arr = ["syahroni", "ganteng", "banget"];
+      //   console.log(arr.join(" "));
+
+      //1. push
+      //   (untuk menambah isi array di akhir array)
+      //   var arr = ["syahroni", "ganteng", "banget"];
+      //   arr.push("dody");
+      //   console.log(arr.join(" "));
+
+      // 2.Pop
+      //   (untuk menghapus isi array dibelakangnya)
+      //   var arr = ["syahroni", "ganteng", "banget"];
+      //   arr.pop();
+      //   console.log(arr.join(" "));
+
+      //   3.unshift
+      // (  (untuk menambah isi array di awwal array))
+      //   var arr = ["syahroni", "ganteng", "banget"];
+      //   arr.unshift("putri");
+      //   console.log(arr.join(" "));
+      // 4.shift
+      // (  (untuk menghapus isi array di awwal array))
+      // var arr = ["syahroni", "ganteng", "banget"];
+      // arr.shift();
+      // console.log(arr.join(" "));
+
+      //4.Splice
+      // (Menyisipkan elemen indeks ditengah)
+      // Syntax(spilce(indexAwal,Mau diapus berapa , elemenbaaru2,..));
+      // var arr = ["syahroni", "ganteng", "banget"];
+      // arr.splice(1, 2, "ganss", "banget");
+      // console.log(arr.join(" "));
+      // 5.Slice
+      // mengiris(mengambil array untuk ditampilkan) sebuah array menjadi array yang baru
+      // (syntax(slice(awal,akhir)))
+      // var arr = ["syahroni", "ganteng", "banget"];
+      // var arr2 = arr.slice(0, 2);
+      // console.log(arr2.join(" "));
+
+      // Disini kita bisa melakukan seusatu pada elemen elemen secara otomatis
+      // 6.foreach
+      //(Menampilkan semua nilai yang terdapat di array)
+      // var angka = [1, 2, 3, 4, 5, 6, 7, 8];
+      // var arr = ["syahroni", "ganteng", "banget"];
+      // angka.forEach(function (e) {
+      //   console.log(e);
+      // });
+      // arr.forEach(function (e, i) {
+      //   console.log("mahasiswa ke " + (i + 1) + " adalah " + e);
+      // });
+      // 7.map
+      // (Mengembalikan semua nilai array jika ingin dibuat aritmatika)
+      // var angka = [1, 2, 3, 4, 5, 6, 7, 8];
+      // var angka2 = angka.map(function (e) {
+      //   return e * 2;
+      // });
+      // console.log(angka2.join(" "));
+      // 8.sort
+      // Mengurutkan sebuah angka pada array
+      // var angka = [2, 6, 4, 3, 1, 8, 9];
+      // var angka = [2, 6, 4, 3, 10, 20, 1, 8, 9];
+      // contoh ke 2
+      // angka.sort(function (e, i) {
+      //   return e - i;
+      // });
+      // console.log(angka.join(" "));
+
+      // 9.filter
+      // meneumkan banyak nilai
+      // var angka = [1, 2, 3, 4, 5, 6, 7, 8];
+
+      // var angka2 = angka.filter(function (c) {
+      //   // return c == 5;
+      //   return c > 5;
+      // });
+      // console.log(angka2.join(" "));
+      // 10.find
+      // Menemukan hanya satu nilai
+      var angka = [1, 2, 3, 4, 5, 6, 7, 8];
+
+      var angka2 = angka.find(function (c) {
+        // return c == 5;
+        return c > 5;
+      });
+      console.log(angka2);
+    </script>
+  </body>
+</html>

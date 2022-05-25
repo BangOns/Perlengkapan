@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Object
+    adalah array , yang lebih sakti -->
+    <!-- Properti adalah variabel yang ada didalam objek
+    Method adalah function yang didalam object -->
+
+    <script>
+      //   var msw = ["roni", true, [2.3, 3.1, 2.5, 2.6]];
+      //   function ipKomulatif(Ipsemester) {
+      //     var total = 0;
+      //     for (var i = 0; i < Ipsemester.length; i++) {
+      //       total += Ipsemester[i];
+      //     }
+      //     return total / Ipsemester.length;
+      //   }
+      //   console.log(ipKomulatif(msw[2]));
+
+      // Contoh dari variable
+      // var orang = {
+      //   nama: "syahroni", //ini properti
+      //   umur: 19, //ini properti
+      //   pekerjaan: "mahasiswa", //ini properti
+      //   sapa: function () {
+      //     //ini adalah method
+      //     return (
+      //       "Hi, nama saya " +
+      //       this.nama +
+      //       "usia saya " +
+      //       this.umur +
+      //       " tahun ,\n dan saya adalah seorang " +
+      //       this.pekerjaan
+      //     );
+      //   },
+      // };
+
+      var mhs = {
+        nama: "syahroni",
+        umur: 19,
+        kelas: "R28",
+        ipk: [2.66, 2.77, 2.88, 2.55, 2.45],
+        alamat: {
+          jalan: "Gg.samad modo",
+          kota: "Jaktim",
+          kelurahan: "Pekayon",
+          kecamatan: "pasar rebo",
+        },
+      };
+      // Jikalau kalian ingin menampilkan object nya dengan cara
+      // <variableObject>.isiObject atau <variableObject>[isiOnject]
+      // Contoh
+      // mhs.nama
+      // mhs["nama"]
+
+      // kalau ada object didalam object maka tinggal tambahin seperti ini
+      // mhs.alamat.jalan atau
+      // mhs["alamat"]["jalan"]
+    </script>
+  </body>
+</html>

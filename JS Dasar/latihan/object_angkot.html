@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Angkot(supir, trayek, penumpang, kas) {
+        this.supir = supir;
+        this.trayek = trayek;
+        this.penumpang = penumpang;
+        this.kas = kas;
+
+        this.penumpangNaik = function (namaPenumpang, arah) {
+          this.penumpang.push(namaPenumpang);
+          if (arah == this.trayek[0]) {
+            console.log(namaPenumpang + " Mau Ke arah " + this.trayek[0]);
+            return this.penumpang;
+          } else if (arah == this.trayek[1]) {
+            console.log(namaPenumpang + " Mau Ke arah " + this.trayek[1]);
+            return this.penumpang;
+          } else {
+            console.log("Tidak ada arah");
+            return false;
+          }
+        };
+        this.penumpangTurun = function (namaPenumpang, bayar, arah) {
+          if (this.penumpang.length == 0) {
+            console.log("angkot masih kosong");
+            return false;
+          } else if (this.penumpang.length > 0) {
+            for (var i = 0; i < this.penumpang.length; i++) {
+              if (
+                this.penumpang[i] == namaPenumpang ||
+                (bayar >= 10000 && arah == trayek[0])
+              ) {
+                console.log("silahkan turun");
+                this.penumpang[i] = undefined;
+                this.kas += bayar;
+                return this.penumpang;
+              } else if (
+                this.penumpang[i] == namaPenumpang ||
+                (bayar >= 5000 && arah == trayek[1])
+              ) {
+                console.log("silahkan turun");
+                this.penumpang[i] = undefined;
+                this.kas += bayar;
+                return this.penumpang;
+              } else if (i == this.penumpang.length - 1) {
+                console.log("penumpang Tidak Ada");
+                return false;
+              }
+            }
+          }
+        };
+      }
+      var angkot1 = new Angkot("syahroni", ["depok", "jakarta"], [], 0);
+      var angkot2 = new Angkot("putri", ["cibubur", "cileungsi"], [], 0);
+    </script>
+  </body>
+</html>

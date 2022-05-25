@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Membuat Object
+- Object Literal 
+- Function Declaration
+- constructor function(keyword new)
+.Object.create -->
+    <script>
+      // Object Lieteral
+      // var obj = {};
+      // obj.halo = function () {
+      //   console.log("halo");
+      // };
+      // obj.halo();
+      var mhs = {
+        nama: "syahroni",
+        nrm: "202143502526",
+        email: "mubtata.khobarr@gmail.com",
+        jurusan: "Teknik Informatika",
+      };
+      var mhs2 = {
+        nama: "BangOns",
+        nrm: "202143502526",
+        email: "Bang.khobarr@gmail.com",
+        jurusan: "Teknik Informatika",
+      };
+
+      //   Function Declaration
+      function bauatObjectMahasiswa(nama, nrm, email, jurusan) {
+        var mhs = {};
+        mhs.nama = nama;
+        mhs.nrm = nrm;
+        mhs.email = email;
+        mhs.jurusan = jurusan;
+        return mhs;
+      }
+      //   Setelah kita bikin function nya
+      // Sekarang kita panggil functionnya dengan cara
+      var mhs3 = bauatObjectMahasiswa(
+        "syahroni",
+        "202143502516",
+        "mubtada.hobarr@gmail.com",
+        "teknik Informatika"
+      );
+      //   Dan kita bisa membuat object baru tanpa membuat urutannya kembali dengan menggunakan function
+      // Contoh
+      var mhs4 = bauatObjectMahasiswa(
+        "Bowo",
+        "200043502516",
+        "Bowo.hobarr@gmail.com",
+        "teknik Informatika"
+      );
+
+      //   Constructor
+      // ini adalah function yang khusus buat object
+      function Mahasiswa(nama, nrm, email, jurusan) {
+        //   anggap saja kita punya
+        // var this={};
+        this.nama = nama;
+        this.nrm = nrm;
+        this.email = email;
+        this.jurusan = jurusan;
+        // return rhis;
+      }
+
+      var mhs5 = new Mahasiswa(
+        "syahroni",
+        "202143502516",
+        "ronniii@gmail.com",
+        "teknik informatika"
+      );
+
+      function Halo() {
+        console.log("halo");
+      }
+      new Halo();
+    </script>
+  </body>
+</html>

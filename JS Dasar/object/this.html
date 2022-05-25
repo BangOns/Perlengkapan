@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- this
+    Definisi this
+  this adalah sebuah keyword special yang secara otomatis itu didefinisiksan pada setiap funtcion -->
+    <script>
+      // var a = 10;
+      // console.log(this.a);
+
+      // Function Declaration
+      // function Halo() {
+      //   console.log(this);
+      //   console.log("halo");
+      // }
+      // this.Halo();
+      // this adalah mengembalikan object Global pada function declaration
+
+      // 2.Object Literal
+      // var obj = { a: 10, nama: "syahroni" };
+      // obj.halo = function () {
+      //   console.log(this);
+      //   console.log("halo");
+      // };
+      // obj.halo();
+      // This Mengembalikkan object yang bersangkutan
+
+      // 3.Constructor
+      function Halo() {
+        console.log(this);
+        console.log("halo");
+      }
+      var obj1 = new Halo();
+      // This nya mengembalikkan object yang dibuat
+    </script>
+  </body>
+</html>
