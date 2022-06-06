@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- mengambil nilai dari input itu dengan cara
+element.value -->
+<!-- Apabila mau acak nilai angka dengan cara
+Math.ramdom() -->
+<!-- cara mengambil angka lalu masukkan ke warna dengan cara concatination yaitu memakai backlist (` `) -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>latihan DOM</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        text-align: center;
+      }
+      .biru {
+        color: brown;
+      }
+      .kotak {
+        width: 25px;
+        height: 25px;
+        margin: 10px auto;
+      }
+      .merah {
+        background-color: red;
+      }
+      .hijau {
+        background-color: green;
+      }
+      .biru {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bermain dengan warna</h1>
+    <button type="button" class="click">CLick Me</button>
+    <br /><br />
+    <div class="kotak merah"></div>
+    <input type="range" name="smerah" id="ss" min="1" max="255" />
+    <div class="kotak hijau"></div>
+    <input type="range" name="shijau" id="ss" min="1" max="255" />
+    <div class="kotak biru"></div>
+    <input type="range" name="sbiru" id="ss" min="1" max="255" />
+    <script>
+      const pencet = document.querySelector(".click");
+      const h1 = document.querySelector("h1");
+      //   pencet.onclick = function () {
+      //     // h1.style.color = "red";
+      //     // h1.setAttribute("class", "biru");
+      //     h1.classList.toggle("biru");
+      //   };
+      pencet.addEventListener("click", function () {
+        const r = Math.round(Math.random() * 255 + 1);
+        const g = Math.round(Math.random() * 255 + 1);
+        const b = Math.round(Math.random() * 255 + 1);
+        h1.style.color = `rgb(${r},${g},${b})`;
+      });
+
+      const tombol = document.createElement("button");
+      const textmbl = document.createTextNode("tombol");
+      tombol.appendChild(textmbl);
+      tombol.setAttribute("type", "button");
+      pencet.after(tombol);
+
+      tombol.addEventListener("click", function () {
+        //   cara acak warna
+        const r = Math.round(Math.random() * 255 + 1);
+        const g = Math.round(Math.random() * 255 + 1);
+        const b = Math.round(Math.random() * 255 + 1);
+        document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+      });
+
+      const sMerah = document.querySelector("input[name=smerah]");
+      const shijau = document.querySelector("input[name=shijau]");
+      const sbiru = document.querySelector("input[name=sbiru]");
+      sMerah.addEventListener("input", function () {
+        console.log(sMerah.value);
+        const r = sMerah.value;
+        document.body.style.backgroundColor = `rgb(${r},0,0)`;
+      });
+      shijau.addEventListener("input", function () {
+        console.log(shijau.value);
+        const r = sMerah.value;
+        const g = shijau.value;
+        document.body.style.backgroundColor = `rgb(${r},${g},0)`;
+      });
+      sbiru.addEventListener("input", function () {
+        console.log(sbiru.value);
+        const r = sMerah.value;
+        const g = shijau.value;
+        const b = sbiru.value;
+        document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+      });
+
+      document.body.addEventListener("mousemove", function (e) {
+        // posisi mouse
+        // console.log(event.clientX); = untuk mengetahui koordinat sumbu X nya
+        // console.log(event.clientY); =untuk mengetahui koordinat sumbu Y nya
+        // ini adalah ukuran seluruh dari browser
+        // console.log(window.innerWidth);
+
+        // dan ini adalah ukuran dari si website
+        // console.log(document.innerWidth);
+
+        const xPose = Math.round((event.clientX / window.innerWidth) * 255);
+        const yPose = Math.round((event.clientY / window.innerWidth) * 255);
+        document.body.style.backgroundColor = `rgb(${xPose},${yPose},0)`;
+        console.log(xPose);
+      });
+    </script>
+  </body>
+</html>

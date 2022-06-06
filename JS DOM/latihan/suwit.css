@@ -1,0 +1,397 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(img/bg.png);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* Tampilan Awal */
+/* 
+.buble1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(135, 221, 188);
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 15%;
+  left: 10%;
+  opacity: 0;
+  animation-name: myanime;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.buble2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(135, 221, 188);
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  opacity: 0;
+  animation-name: myanime;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.buble3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(135, 221, 188);
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  opacity: 0;
+  animation-name: myanime2;
+  animation-duration: 2s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.buble4 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(135, 221, 188);
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  opacity: 0;
+  animation-name: myanime2;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+/*@keyframes myanime {
+  0% {
+    transform: translateY(-200%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-200%);
+  }
+}
+@keyframes myanime2 {
+  0% {
+    transform: translateY(200%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(200%);
+  }
+}*/
+.container2 {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, white, aqua);
+  position: relative;
+  opacity: 0;
+  animation-name: back;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes back {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mulai {
+  0% {
+    opacity: 0;
+    transform: rotateX(100deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+.play {
+  width: 100px;
+  height: 50px;
+  background-color: brown;
+  top: 40%;
+  z-index: 1;
+  left: 45%;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: 2px 3px 5px black;
+  transition: all 0.5s;
+  animation-name: mulai;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  opacity: 0;
+  position: absolute;
+  animation-fill-mode: forwards;
+}
+.play:hover {
+  margin-top: -10px;
+}
+.btn-play {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin-right: 0;
+  padding-top: 0px;
+  margin-left: -10px;
+}
+.play h1 {
+  font-size: 20px;
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  top: 28%;
+  right: 10%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+}
+
+.context {
+  width: 100%;
+  position: absolute;
+  top: 50vh;
+}
+
+.context h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.area {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+/* Tampilan Akhir */
+/* Area Main */
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.area-main {
+  display: none;
+}
+.active {
+  transition: all 1s;
+}
+.container {
+  width: 600px;
+  margin: 10px auto;
+  position: relative;
+  box-sizing: border-box;
+}
+.areaComputer {
+  width: 560px;
+  height: 250px;
+  background-image: linear-gradient(to bottom, black, rgb(172, 221, 36));
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 5px auto;
+  border: 5px solid salmon;
+}
+img {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: auto;
+  padding-top: 40px;
+  cursor: pointer;
+}
+.info {
+  width: 300px;
+  height: 80px;
+  margin: auto;
+  border-radius: 10px 10px 10px 10px;
+  border: 5px solid salmon;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  background-color: aqua;
+  color: salmon;
+  z-index: 11;
+}
+.info p {
+  text-align: center;
+  font-family: monospace;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.areaKita {
+  width: 570px;
+  height: 250px;
+  margin: 5px auto;
+  background-image: linear-gradient(to bottom, blue, rgb(224, 39, 39));
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  box-sizing: border-box;
+  border: 5px solid salmon;
+}
+ul {
+  list-style: none;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+li {
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.orang:hover,
+.gajah:hover,
+.semut:hover {
+  filter: drop-shadow(1px 1px green);
+  bottom: 2px;
+}
+.gajah,
+.orang,
+.semut {
+  position: relative;
+  transition: 0.55s;
+}
+.orang:active,
+.gajah:active,
+.semut:active {
+  bottom: 2px;
+}

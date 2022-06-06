@@ -1,0 +1,37 @@
+tipe - tipe node adalah
+elemen 
+attribute
+ text 
+ CData Section
+ Entility Reference 
+ Entility
+ Processing Intruction
+ Comment
+ Document
+ Document Type
+ Document Fragment
+ Notation
+
+ harus memahami 
+ NodeList adalah memilih lebih dari satu node apa saja
+  dan HTML Collection adalah kumpulan node tapi khsuus elemen HTML saja
+
+dan keduanya merupakan kumpulan node.
+Struktur data nya mirip array.
+nodeList dapat bersisi node apapun sedangkan HTMLCollection harus bersisi elemen HTML.
+HTMLCollection bersifat Live seangkan NodeList tidak.
+
+SRUKTUR HIERARKI DOM Tree
+-root node adalah node yang menjadi sumber dari semua node lain didalam DOM dan secara default node itu adalah document
+-parent Node adalah yang berada satu tingkat diatas node yang lain contoh , body adalah parent dari h1,h2,p,a,dll.
+Child Node adalah node yang berada 1 tingkat dibawah node yang lain,contoh, h1 adalah child dari body
+
+
+CARA MEMBEDAKAN HTMLCollection dan NodeList
+
+HTMLCollection itu jika ingin merubah suatu element yang telah memiliki id atau class
+seperti 
+getElementById()=ini untuk element yang mempunyai id
+dan lainnya
+
+dan kalo Memakai nodelist itu jika tidak ingin menambhkan class atau id pada element HTML 

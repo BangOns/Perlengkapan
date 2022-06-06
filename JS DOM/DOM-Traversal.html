@@ -1,0 +1,198 @@
+<!-- DOM Traversal -->
+<!-- Penelusuran DOM -->
+<!-- Kenapa harus ditelusuri ? -->
+<!-- METHOD DOM TRAVERSAL -->
+<!-- -parentNode = Node-->
+<!-- -parentElement = orang tua dari element  = element-->
+<!-- -nextSibling =  masih sodara kandung dan nextnya itu adalah setelah nya   = node -->
+<!-- nextElementSibling = element-->
+<!-- previousSibling =node -->
+<!-- proveousElementSibling  = node -->
+
+<!-- 'e'  ini untuk mengumpulkan banyak element tanpa kita panggil satu persatu -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Traversal</title>
+    <style>
+      body {
+        margin: 50px;
+        font-family: arial;
+        background-color: #666;
+      }
+
+      .container {
+        width: 900px;
+        margin: auto;
+      }
+
+      .card {
+        display: inline-block;
+        width: 220px;
+        padding: 0 80px;
+        height: 80px;
+        font-size: 16px;
+        line-height: 80px;
+        border-radius: 40px;
+        background-color: #f1f1f1;
+        margin: 20px;
+        position: relative;
+        text-align: center;
+      }
+
+      .card img {
+        float: left;
+        margin: 0 10px 0 -80px;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .card .nama,
+      .card .telp {
+        display: block;
+        line-height: 20px;
+        padding: 0 5px;
+      }
+
+      .card .nama {
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .card .telp {
+        margin-left: 20px;
+        margin-top: 5px;
+        font-size: 16px;
+        color: #aaa;
+      }
+
+      .card .close {
+        font-size: 24px;
+        font-weight: bold;
+        color: #999;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        cursor: pointer;
+      }
+
+      .card:hover .close {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="latihan/img/gajah.png" width="96" height="96" /><span
+          class="nama"
+          >Syahroni</span
+        ><span class="telp">089603561870</span><span class="close">×</span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="latihan/img/semut.png" width="96" height="96" />
+        <span class="nama">Syahroni</span>
+        <span class="telp">089603561870</span>
+        <span class="close">×</span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="latihan/img/orang.png" width="96" height="96" />
+        <span class="nama">Syahroni</span>
+        <span class="telp">089603561870</span>
+        <span class="close">×</span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="latihan/img/gajah.png" width="96" height="96" />
+        <span class="nama">Syahroni</span>
+        <span class="telp">089603561870</span>
+        <span class="close">×</span>
+      </div>
+    </div>
+
+    <script>
+      // DOM Yang hanya mengambil satu element atau class
+      //   const kartu = document.querySelector(".card");
+      //   const hilang = document.querySelector(".close");
+      //   hilang.addEventListener("click", function () {
+      //     kartu.style.display = "none";
+      //   });
+      //   function gone() {
+      //     kartu.style.display = "none";
+      //   }
+
+      //   DOM Traversal yaitu DOM yang bisa mengmabil beberapa class
+
+      //   parentelement
+      //   Syntax nya yaitu
+      // element.parentElement.style;
+      //   ada object atau parameter didalam funtion  yang berisi informasi dari event yang terjadi
+      // Contoh
+      // close[i].addEventListener("click", function (e)
+      // Jadi e nya ini mengikuti event yang kita pilih
+      // dan event yang kita pilih contoh ='click'
+      const close = document.querySelectorAll(".nama");
+      // close.forEach(function (hilang) {
+      //   hilang.addEventListener("click", function (e) {
+      //     e.target.parentElement.style.display = "none";
+      //   });
+      // });
+      //   const kartu = document.querySelectorAll(".card");
+      // Contoh Pertama
+      //   for (let i = 0; i < close.length; i++) {
+      //     close[i].addEventListener("click", function (e) {
+      //       e.target.parentElement.style.display = "none";
+      //       //   console.log(e.target);
+      //       //   dan jika kita pilih event target maka ia akan mengambil element yang di click nya
+      //       //   close[i].parentElement.style.display = "none";
+      //     });
+      //   }
+
+      // ini Contoh kedua
+      // dengan menggunakan forEach()
+      // Kita bisa menulusuri semua element yang sama tanpa membuat syntax for
+      //   close.forEach(function (parameter) {
+      //     parameter.addEventListener("click", function (e) {
+      //       e.target.parentElement.style.display = "none";
+      //     });
+      //   });
+
+      // parentElement
+      //   mengambil orang tua dari si elementnya
+      const nama = document.querySelector(".nama");
+      console.log(nama.parentElement.parentElement);
+
+      // parentNode
+      //   mengambil sodara kandung dari si elementnya
+      console.log(nama.parentNode);
+
+      //   nextSibling
+      //   mengambil node setelah nya tanpa spasinbbbbb
+      console.log(nama.nextSibling);
+
+      //   nextELementSibling
+      //   jika lau ingin mengambil element nya langsung dengan cara = nextElemntSibling
+      console.log(nama.nextElementSibling);
+
+      //   prevousSibling
+      //   mengambil element sebelum nya tanpa spasi
+      console.log(nama.previousSibling);
+
+      //   prevousELementSibling
+      //   jika lau ingin mengambil element nya langsung dengan cara = nextElemntSibling
+      console.log(nama.previousElementSibling);
+    </script>
+  </body>
+</html>

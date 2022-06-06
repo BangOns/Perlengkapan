@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .namput {
+        width: 29.5vw;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="" class="nama">Masukkan Nama</label>
+      <input type="text" placeholder="Masukkan Nama" class="namput" />
+      <br />
+      <label for="" class="pass">Masukkan Password</label>
+      <input type="password" placeholder="Masukkan Password" class="passput" />
+
+      <br />
+    </form>
+    <button id="kirim" onclick="henti()">Kirim</button>
+
+    <p id="waktu"></p>
+
+    <script>
+      const go = document.getElementById("kirim");
+      const clock = document.querySelector("#waktu");
+      const nammu = document.querySelector(".namput");
+      let pasword = document.querySelector("input[type=Password]");
+      const longkap = document.getElementsByTagName("br")[1];
+      const terim = document.createElement("p");
+      go.after(terim);
+      const ulang = document.createElement("button");
+      ulang.setAttribute("type", "reset");
+      longkap.after(ulang);
+      ulang.style.display = "none";
+      const hasilNama = document.createElement("p");
+      clock.after(hasilNama);
+
+      let hasilPw = document.createElement("p");
+      hasilNama.after(hasilPw);
+      const menit = 2;
+      let time = menit * 60;
+      const hitung = setInterval(CountDown, 1000);
+      function CountDown() {
+        const minutes = Math.floor(time / 60);
+        let detik = time % 60;
+
+        clock.innerHTML = minutes + " : " + detik;
+
+        if (time < 0) {
+          clearInterval(hitung);
+          go.style.display = "none";
+          clock.innerHTML = "waktu anda Habis";
+          const ulang = setTimeout(Diulang, 1000);
+        } else {
+          time--;
+        }
+      }
+      go.addEventListener("click", function () {
+        setTimeout(function () {
+          clearInterval(hitung);
+          go.style.display = "none";
+          clock.style.display = "none";
+          terim.innerHTML = "Terima kasih";
+          hasilNama.innerHTML = "Nama Mu adalah " + nammu.value;
+          let digit = String(pasword.value).length;
+
+          hasilPw.innerHTML = "Password mu ada " + digit + " digit";
+          const ulang = setTimeout(Diulang, 1000);
+        }, 1000);
+      });
+
+      function Diulang() {
+        let rr = confirm("mau di ulang");
+        if (rr == true) {
+          location.reload();
+        } else {
+          alert("terimakasih");
+        }
+      }
+    </script>
+  </body>
+</html>

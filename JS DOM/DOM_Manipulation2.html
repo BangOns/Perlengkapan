@@ -1,0 +1,132 @@
+<!-- Manipulasi Node -->
+<!-- memungkinkan kita untuk bsia menambahkan node baru pada dom atau bisa menghapus  elemen pada dom dan bisa mengganti sebuah elemen menjadi elemen yang baru -->
+<!-- method nya yaitu -->
+<!-- document.createElement() -->
+<!-- document.createTextNode() -->
+<!-- node.appendChild() -->
+<!-- node.insertBefore() -->
+<!-- parentNode.removeChild() -->
+<!-- parentNode.replaceChild() -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+      }
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 600px;
+        margin: 30px auto;
+        font-family: sans-serif;
+        color: #333;
+      }
+      .birumuda {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">Hello World</h1>
+    <div id="container">
+      <section id="a">
+        <p class="p1">paragraf 1</p>
+        <a href="http://instagram.com/sandhikagalih"
+          >Instagram Sandhika Galih</a
+        >
+        <p class="p2">paragraf 2</p>
+        <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+        <p>paragraf 4</p>
+        <ul>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+      </section>
+    </div>
+    <script>
+      // Buat elemen baru
+      // document.createElement() = membuat elemennya dahulu
+
+      //  document.createTextNode() = lalu membuat text nya
+      //  node.appendChild() = lalu menggabungkan keduanya
+      const pBaru = document.createElement("p");
+      const txtp = document.createTextNode("paragraph Baru");
+      // simpan tulisan kedalam pragraph
+      pBaru.appendChild(txtp);
+      // Simpan pBaru diakhir section A
+      const secA = document.getElementById("a");
+      secA.appendChild(pBaru);
+
+      // const p5 = document.createElement("p");
+      // const text = document.createTextNode("Paragraph 5");
+      // p5.appendChild(text);
+      // const Conta = document.querySelector("div#container");
+      // Conta.appendChild(p5);
+
+      // Cara menyisipkan element pada html
+      // document.createElement()
+      // document.createTextNode()
+      // node nya.insertBefore()
+      // dengan cara
+      // 1.Membuat element nya dahulu
+      // 2.Membuat text nya
+      // 3.cari tahu parent nya
+      // 4.Kita harus tangkap setelahnya
+      const liBaru = document.createElement("li");
+      const textLi = document.createTextNode("Item baru");
+      liBaru.appendChild(textLi);
+      const ul = document.querySelector("section#b ul");
+
+      // const li2=document.querySelector('section#b ul li:nth-child(2');
+
+      // dan bisa kita menscope pencahariannya
+      const li2 = ul.querySelector("li:nth-child(2)");
+      // Cara menyisipkannya yaitu
+      // panggil element yang baru dibuat
+      // lalu panggil element setelahnya
+      // INGAT ADA 2 NODE
+      ul.insertBefore(liBaru, li2);
+
+      // Cara menghapus element
+      // memanggil element parentnya
+      // lalu membuat element yang mau di apus
+      // lalu hapus dengan memakai method removeCild()
+      const sectionA = document.querySelector("section#a");
+      const link = document.getElementsByTagName("a")[0];
+      sectionA.removeChild(link);
+
+      // Cara Merubah element
+      // panggil element parentnya
+      const secB = document.getElementById("b");
+      // panggil element yang mau diganti
+      const p4 = secB.querySelector("p");
+      // buat element baru untuk diubah
+      const h2B = document.createElement("h2");
+      const etxtB = document.createTextNode("Paragraph baru");
+      // lalu panggil gabungkan element dengan text nya
+      h2B.appendChild(etxtB);
+      // lalu ganti element lama dengan element yang baru
+      // INGAT REPLACE ITU MEMAKAI DUA NODE YAITU
+      // 1.PANGGIL ELEMENT BARUNYA
+      // 2.LALU ELEMENT LAMANYA
+      secB.replaceChild(h2B, p4);
+
+      // element yang sudah diganti
+      pBaru.style.backgroundColor = "green";
+      liBaru.style.backgroundColor = "green";
+      h2B.style.backgroundColor = "green";
+    </script>
+  </body>
+</html>

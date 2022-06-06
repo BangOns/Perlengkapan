@@ -1,0 +1,29 @@
+DOM (Document Object Model)
+-DOM adlaah antarmuka pemrograman berbasis objek yang mempresentasikan dokumen web.
+-DOM membuat seluruh komponen dari halaman web dapat diakses & dimanipulasi
+-DOM dapat dimanipulasi (dinuat , diubah , dihapus )menggunakan javascript
+
+Object adalah contoh 
+representasi elemen html pada dokumen menjadi sebuah object.
+DOM itu semacam pohon atau keluarga
+contoh 
+html mempunyai anak itu head dan body 
+dan head mempunyai anak yaitu meta dan title
+dan body mempunyai anak h1,h2 dll
+
+dan ternyata html mempunyai riang tau yaitu Document
+dan document mempunyai orang tua yaitu window
+dan window mempunyai anak yaitu document,history, dan location 
+
+
+Materi di seri ini :
+DOM selection
+DOM manipulation
+DOM traversal
+event handling
+Studi kasus
+
+HArus memahami 
+html
+CSS
+javascript

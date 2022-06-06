@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Pengujian waktu pada Javascipt -->
+    <!-- syntax nya yaitu -->
+    <!-- (variable) = new Date() = menampilkan hari ini -->
+
+    <!-- (variable) = new Date().getTime() = akan menampilkan angka detik di hari ini -->
+
+    <!-- (variable) = new Date('Tentukan Tanggal tujuan yang ingin dituju').getTime() = akan menampilkan tanggal berapa lama waktu yang dituju  -->
+
+    <!-- setTimeOut() = digunakan ketika kita ingin menjalankan code kita setelah kita menunggu sejumlah waktu tertentu -->
+    <h1>hello world</h1>
+    <button id="tombol">clikc</button>
+    <!-- setInterval() =  digunakan ketika kita ingin menjalankan blok program pada code kita secara berulang ulang-->
+    <script>
+      // SetTimeOut()
+      // Contoh 1
+      // setTimeout(tampilPesan, 3000);
+      // function tampilPesan() {
+      //   console.log("hello World");
+      // }
+
+      // Contoh ke 2
+      // setTimeout(function () {
+      //   console.log("ok");
+      // }, 2000);
+
+      // Contoh ke 3
+      // const tes = setTimeout(function () {
+      //   console.log("ok");
+      // }, 5000);
+      // const tombol = document.getElementById("tombol");
+      // tombol.addEventListener("click", function () {
+      //   clearTimeout(tes);
+      //   console.log("selesai");
+      // });
+
+      // SetInterval()
+      // perulangan dengan menggunakan waktu
+      // const tes = setInterval(function () {
+      //   console.log("ok");
+      // }, 1000);
+      // const tombol = document.getElementById("tombol");
+      // tombol.addEventListener("click", function () {
+      //   clearInterval(tes);
+      //   console.log("selesai");
+      // });
+
+      // Program hitung mundur
+      const h1p = document.querySelector("h1");
+      h1p.setAttribute("id", "teks");
+      // Ini Menentukan waktu yang ingin diinginkan
+      const tanggalTujuan = new Date("may 30,2022 23:24:00").getTime();
+      const hitungMundur = setInterval(function () {
+        // Ini Menjalankan waktu sekarang
+        // Ini bentuknya MiliSecond
+        const sekarang = new Date().getTime();
+        // Mencari selsisih nya yaitu mengetahui berapa lama untuk mencapai hari itu
+        const selisih = tanggalTujuan - sekarang;
+        const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+        const jam = Math.floor(
+          (selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+        const detik = Math.floor((selisih % (1000 * 60)) / 1000);
+        console.log(sekarang);
+        console.log(tanggalTujuan);
+        console.log(selisih);
+        console.log(hari);
+        console.log(jam);
+        console.log(menit);
+        console.log(detik);
+        h1p.style.fontSize = "15px";
+        h1p.innerHTML =
+          "waktu anda tinggal : " +
+          hari +
+          " hari " +
+          jam +
+          " Jam " +
+          detik +
+          " detik Lagi";
+        if (selisih < 1) {
+          clearInterval(hitungMundur);
+          h1p.innerHTML = "waktu anda habis";
+        }
+      }, 1000);
+      // // Ini Menjalankan waktu sekarang
+      // // Ini bentuknya MiliSecond
+      // const sekarang = new Date().getTime();
+      // // Mencari selsisih nya yaitu mengetahui berapa lama untuk mencapai hari itu
+      // const selisih = tanggalTujuan - sekarang;
+      // const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+      // const jam = Math.floor(
+      //   (selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      // );
+      // const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+      // const detik = Math.floor((selisih % (1000 * 60)) / 1000);
+      // console.log(sekarang);
+      // console.log(tanggalTujuan);
+      // console.log(selisih);
+      // console.log(hari);
+      // console.log(jam);
+      // console.log(menit);
+      // console.log(detik);
+      // h1p.style.fontSize = "15px";
+      // h1p.innerHTML =
+      //   "waktu anda tinggal : " +
+      //   hari +
+      //   " hari " +
+      //   jam +
+      //   " Jam " +
+      //   detik +
+      //   " detik Lagi";
+    </script>
+  </body>
+</html>

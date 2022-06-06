@@ -1,0 +1,119 @@
+<!--DOM Manipulasi Method
+Manipulasi element
+Manipuasi Node -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Manipulasi Element Syntax
+        element.ennerHTML = untuk merubah isi teks
+        element.style.<property> = merubah style yang ada di css
+            element.setAttribute() = untuk memanipulasi sebuah element
+            element.classList = untuk memanipulasi class
+     -->
+    <style>
+      * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+      }
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 600px;
+        margin: 30px auto;
+        font-family: sans-serif;
+        color: #333;
+      }
+      .birumuda {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">Hello World</h1>
+    <div id="container">
+      <section id="a">
+        <p class="p1">paragraf 1</p>
+        <a href="http://instagram.com/sandhikagalih"
+          >Instagram Sandhika Galih</a
+        >
+        <p class="p2">paragraf 2</p>
+        <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+        <p>paragraf 4</p>
+        <ul>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+      </section>
+    </div>
+    <script>
+      // InnerHTML
+      // Untuk mengubah sebuah isi atau sekumpulan isi dari html
+      // innerHTML ini sama bisa seperti element html biasannya
+      // dia bisa membuat div elemen (p) dan lain lainya
+      //   const judul = document.getElementById("judul");
+      //   judul.innerHTML = "<em>Syahroni</em>";
+      //   const SectionA = document.querySelector("section#a");
+      //   SectionA.innerHTML = "hello world";
+
+      // element.style.<proerty>
+      //   const judul = document.querySelector("#judul");
+      //   judul.style.color = "green";
+      //   judul.style.backgroundColor = "lightblue";
+
+      // element.getAttribute() = Mengecek attribute yang ada di html
+
+      // element.setAttribute() = menambahkan attribute seperti class dan lain lain
+
+      // element.removeAttribute() = menghapus attribute yang ada di html
+
+      //   ini setAttribute('element','nama elementnya')
+      //   const judul = document.getElementsByTagName("h1")[0];
+      //   judul.setAttribute("class", "active");
+
+      //   getAttribute()
+      // ini adalah syntax untuk mengecek attribute yang ada didalam html
+      //   const a = document.querySelector("section#a a");
+      //   terjadi di console.log
+
+      // removeAttribute()
+      // const a = document.querySelector("section#a a");
+      // dan terjadi juga di consloe.log
+
+      // problem jika mempunyai class yang menimpa
+      // element.classList()
+      // element.classList ini mempunyai banyak syntax yaitu
+      // element.classList.add() = menambah class baru
+
+      // element.classList.remove() = menghapus class
+
+      // element.classList.toggle() = jika sebuah element tidak mempunyai sebuah class maka ia akan menambahkan dan jika sudah punya maka ia akan menghapusnya
+
+      // element.classList.item() = mengecek class dengan indeks
+
+      // element.classList.contains() = mengecek class nya ada atau tidak
+      // element.classList.replace() = mengganti class yang ada dengan yang class yang baru
+      const p2 = document.querySelector(".p2");
+      //   contoh classList.add('label') = akan menambah
+
+      //   contoh classList.remove('label') = akan menghapus
+
+      //   contoh classList.toggle('label') = akan menambah jika belum ada dan akan menghapus jika sudah ada
+
+      //   contoh classList.item(2) = mengetahui nama class pada element dan dimulai dari 0
+
+      //    contoh classList.class('judul') = menanyakan apakah ada class ini
+
+      // contoh classList.class('judul',<menjadi>'label') = mengganti class
+    </script>
+  </body>
+</html>
